@@ -32,7 +32,7 @@ except Exception as e:
 @app.get("/")
 async def read_root():
     logger.info("Root URL was requested")
-    return "VGG16모델을 사용하는 API를 만들업 봅시다."
+    return "VGG16모델을 사용하는 API를 만들어 봅시다."
 
 @app.get('/sample')
 async def sample_prediction():
@@ -47,8 +47,8 @@ async def sample_prediction():
 # Run the server
 if __name__ == "__main__":
     uvicorn.run("server_vgg16:app",
-            reload= True,   # Reload the server when code changes
-            host="127.0.0.1",   # Listen on localhost 
-            port=5000,   # Listen on port 5000 
-            log_level="info"   # Log level
-            )
+        reload= True,   # Reload the server when code changes
+        host="127.0.0.1",   # Listen on localhost 
+        port=5000,   # Listen on port 5000 
+        log_level="info"   # Log level
+    )

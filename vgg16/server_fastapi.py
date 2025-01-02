@@ -40,8 +40,8 @@ async def get_random(limit:int):
 # Run the server
 if __name__ == "__main__":
     uvicorn.run("server_fastapi:app",
-            reload= True,   # Reload the server when code changes
-            host="127.0.0.1",   # Listen on localhost 
-            port=5000,   # Listen on port 5000 
-            log_level="info"   # Log level
-            )
+        reload= True,   # Reload the server when code changes
+        host="127.0.0.1",   # Listen on localhost 
+        port=5000,   # Listen on port 5000 
+        log_level="info"   # Log level
+    )
